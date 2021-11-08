@@ -34,7 +34,8 @@ def test_joy(cfg):
     V.mem['cam/image_array'] = np.zeros((120, 160,3))
 
     from parts.controller import get_js_controller
-    ctr = get_js_controller(cfg, debug=True)
+    #ctr = get_js_controller(cfg, debug=True)
+    ctr = get_js_controller(cfg)
     V.add(ctr, 
         inputs=['cam/image_array'],
         outputs=['user/angle', 'user/throttle', 'user/mode', 'recording'],
