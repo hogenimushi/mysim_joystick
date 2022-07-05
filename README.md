@@ -1,14 +1,9 @@
-Donkeycar version 4.3.0 / Miniconda / Windows 用に書き換えました。
-
- * Donkeycar v4.3.0
+Rewritten for Donkeycar version 4.3.18 / Windows Working on
+ * Donkeycar v4.3.18
  * Donkeycar / gym_donkeycar
- * Miniconda + m2-base (おそらくpathの変換に必要)
-で動作しています。
+ * Miniconda + libraries needed for Donkeycar + pygame
 
-
-
-
-
+----
 
 # Windows PCマシンにジョイスティックを接続してDonkey Simulator上で運転する
 
