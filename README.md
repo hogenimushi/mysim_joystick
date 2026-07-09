@@ -5,6 +5,36 @@ Rewritten for Donkeycar version 4.3.18 / Windows Working on
 
 ----
 
+## Donkeycar v5.3.0 update (English)
+
+This repository is now based on **donkeycar 5.3.0** (`new_aicar` / `donkey createcar` template).
+
+What changed for v5:
+- Base `manage.py` / `config.py` / `myconfig.py` come from donkeycar 5.3.0.
+- `parts/controller.py` still provides `CONTROLLER_TYPE = 'F710_pygame'` (Windows pygame + Logicool F710 XInput).
+- `manage.py` already hooks `from parts.controller import get_js_controller` inside `add_user_controller()` — no manual edit required.
+- `init_trigger_maps` uses pygame names (`LB`/`RB`, `dpad_up`/`dpad_down`) so shoulder buttons and D-pad work under Windows.
+- Default `myconfig.py` enables gym + F710_pygame (`DONKEY_GYM = True`, `DONKEY_SIM_PATH = "remote"`).
+
+Quick start (v5):
+```bash
+conda activate donkey
+pip install pygame
+cd mysim_joystick
+# start donkey_sim.exe first when DONKEY_SIM_PATH is "remote"
+python manage.py drive --js
+```
+
+Smoke-test joystick only:
+```bash
+python test_f710.py
+python check_key_binding.py
+```
+
+The Japanese sections below are the original v4 guide and remain for reference; prefer the v5 notes above for current setup.
+
+----
+
 # Windows PCマシンにジョイスティックを接続してDonkey Simulator上で運転する
 
 Donkey Simulator を操作する際、PCのキーボードもしくはWebコントローラから行う
